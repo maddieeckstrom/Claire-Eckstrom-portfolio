@@ -1,20 +1,31 @@
 import './App.css'
 
-export default function Home() {
+export default function Home({currentPage, handlePageChange}) {
   return (
     <section>
       <div>
-        <h1>Claire Eckstrom</h1>
-        <h1>Consulting</h1>
+        <a
+          href='#Fashion'
+          onClick={() => handlePageChange('Fashion')}
+        >
+          Fashion, Luxury, &  Lifestyle Brands
+        </a>
       </div>
       <div>
-        <link to>Fashion, Luxury, &  Lifestyle Brands</link>
+        <a 
+          href='#Bars'
+          onClick={() => handlePageChange('Bars')}
+        >
+          Bars & Restaurants
+        </a>
       </div>
       <div>
-        <link to>Bars & Restaurants</link>
-      </div>
-      <div>
-        <link to>Other creatives</link>
+        <a 
+          href='#Other'
+          onClick={() => handlePageChange('Other')}
+        >
+          Other creatives
+        </a>
       </div>
     </section>
   )
