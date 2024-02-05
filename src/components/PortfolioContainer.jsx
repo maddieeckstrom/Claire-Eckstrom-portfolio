@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import '../App.css';
-import Header from '../components/Header';
 import Home from '../components/Home';
 import Fashion from '../components/Fashion';
 import Bars from '../components/Bars';
@@ -8,22 +7,22 @@ import Other from '../components/Other';
 
 
 export default function PortfolioContainer() {
-    const [currentPage, setCurrentPage] = useState('AboutMe');
+    const [currentPage, setCurrentPage] = useState('Home');
 
     const renderPage = () => {
-        if (currentPage === 'AboutMe') {
-            return <Home />;
-        }
+        // if (currentPage === 'Home') {
+        //     return <Home />;
+        // }
 
-        if (currentPage === 'Portfolio') {
+        if (currentPage === 'Fashion') {
             return <Fashion />;
         }
 
-        if (currentPage === 'Resume') {
+        if (currentPage === 'Bars') {
             return <Bars />;
         }
         
-        if (currentPage === 'Contact') {
+        if (currentPage === 'Other') {
             return <Other />;
         }
     };
@@ -32,7 +31,7 @@ export default function PortfolioContainer() {
 
     return (
         <div>
-          <Header currentPage={currentPage} handlePageChange={handlePageChange} />
+          <Home currentPage={currentPage} handlePageChange={handlePageChange}/>
           <main>{renderPage()}</main>
         </div>
       );
