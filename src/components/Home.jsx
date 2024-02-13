@@ -1,46 +1,46 @@
-// import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../App.css'
 
 export default function Home({currentPage, handlePageChange}) {
 
-  // const [showContent, setShowContent] = useState(false);
-  // const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+  const [showContent, setShowContent] = useState(false);
+  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
 
-  // useEffect(() => {
-  //   const timeout = setTimeout(() => {
-  //     setShowContent(true);
-  //   }, 2000);
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setShowContent(true);
+    }, 2000);
 
-  //   return () => clearTimeout(timeout);
-  // }, []);
+    return () => clearTimeout(timeout);
+  }, []);
 
-  // useEffect(() => {
-    // Set interval to toggle header visibility every 500 milliseconds
-    // const intervalId = setInterval(() => {
-    //   setIsHeaderVisible(prevState => !prevState);
-    // }, 500);
+  useEffect(() => {
+    // Set interval to toggle header visibility every 1/2 second
+    const intervalId = setInterval(() => {
+      setIsHeaderVisible(prevState => !prevState);
+    }, 500);
 
-    // Clear interval after 2000 milliseconds (2 seconds)
-    // setTimeout(() => {
-    //   clearInterval(intervalId);
-    //   setIsHeaderVisible(true); // Ensure header is visible after blinking
-    // }, 2000);
+    // Clear after 2 seconds
+    setTimeout(() => {
+      clearInterval(intervalId);
+      setIsHeaderVisible(true);
+    }, 2000);
 
     // Cleanup function to clear interval
-  //   return () => clearInterval(intervalId);
-  // }, []);
+    return () => clearInterval(intervalId);
+  }, []);
   
   return (
     <section className="section-container">
-      {/* {isHeaderVisible && ( */}
-      <div className="header">
-        <p>CLAİRE ECKSTRÖM</p>
-        <p>CONSULTING</p>
-      </div>
-      {/* )} */}
+      {isHeaderVisible && (
+        <div className="header">
+          <p>CLAİRE ECKSTRÖM</p>
+          <p>CONSULTING</p>
+        </div>
+      )}
       <div
         className="home-nav" 
-        // style={{ display: showContent ? 'block' : 'none' }}
+        style={{ display: showContent ? 'grid' : 'none' }}
       >
         <div className='fashion'>
           <a
