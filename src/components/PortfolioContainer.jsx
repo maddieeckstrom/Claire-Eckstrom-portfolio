@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import '../App.css';
+import Navbar from './Navbar'
 import Home from '../components/Home';
 import Fashion from '../components/Fashion';
 import Bars from '../components/Bars';
 import Other from '../components/Other';
+import Footer from '../components/Footer';
 
 
 export default function PortfolioContainer() {
@@ -33,6 +35,7 @@ export default function PortfolioContainer() {
         <div>
           <Home currentPage={currentPage} handlePageChange={handlePageChange}/>
           <main>{renderPage()}</main>
+          <Footer />
         </div>
       );
 }
