@@ -1,6 +1,17 @@
+// import React, { useState, useEffect } from 'react';
 import '../App.css'
 
 export default function Home({currentPage, handlePageChange}) {
+
+  // const [showContent, setShowContent] = useState(false);
+
+  // useEffect(() => {
+  //   const timeout = setTimeout(() => {
+  //     setShowContent(true);
+  //   }, 2000);
+
+  //   return () => clearTimeout(timeout);
+  // }, []);
   
   return (
     <section className="section-container">
@@ -8,7 +19,10 @@ export default function Home({currentPage, handlePageChange}) {
         <p>CLAİRE ECKSTRÖM</p>
         <p>CONSULTING</p>
       </div>
-      <div className="home-nav">
+      <div
+        className="home-nav" 
+        // style={{ display: showContent ? 'block' : 'none' }}
+      >
         <div className='fashion'>
           <a
             href='#Fashion'
