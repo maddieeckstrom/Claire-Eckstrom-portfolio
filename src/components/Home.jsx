@@ -4,6 +4,7 @@ import '../App.css'
 export default function Home({currentPage, handlePageChange}) {
 
   // const [showContent, setShowContent] = useState(false);
+  // const [isHeaderVisible, setIsHeaderVisible] = useState(true);
 
   // useEffect(() => {
   //   const timeout = setTimeout(() => {
@@ -12,13 +13,31 @@ export default function Home({currentPage, handlePageChange}) {
 
   //   return () => clearTimeout(timeout);
   // }, []);
+
+  // useEffect(() => {
+    // Set interval to toggle header visibility every 500 milliseconds
+    // const intervalId = setInterval(() => {
+    //   setIsHeaderVisible(prevState => !prevState);
+    // }, 500);
+
+    // Clear interval after 2000 milliseconds (2 seconds)
+    // setTimeout(() => {
+    //   clearInterval(intervalId);
+    //   setIsHeaderVisible(true); // Ensure header is visible after blinking
+    // }, 2000);
+
+    // Cleanup function to clear interval
+  //   return () => clearInterval(intervalId);
+  // }, []);
   
   return (
     <section className="section-container">
+      {/* {isHeaderVisible && ( */}
       <div className="header">
         <p>CLAİRE ECKSTRÖM</p>
         <p>CONSULTING</p>
       </div>
+      {/* )} */}
       <div
         className="home-nav" 
         // style={{ display: showContent ? 'block' : 'none' }}
