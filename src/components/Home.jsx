@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import '../App.css';
 // import { motion } from "framer-motion";
 import CElogo from '../assets/images/CEConsulting.png';
+import fashionIMG from '../assets/images/fashionIMG.png';
+import barsIMG from '../assets/images/barsIMG.png';
+import otherIMG from '../assets/images/otherIMG.png';
 
 export default function Home({currentPage, handlePageChange}) {
 
@@ -44,7 +47,7 @@ export default function Home({currentPage, handlePageChange}) {
             onClick={() => handlePageChange('Fashion')}
             className={currentPage === 'Fashion' ? 'fashion-link active' : 'fashion-link'}
           >
-            <img></img>
+            <img className="fashionIMG" src={fashionIMG}></img>
           </a>
         </div>
         <div className='bars'>
@@ -53,7 +56,7 @@ export default function Home({currentPage, handlePageChange}) {
             onClick={() => handlePageChange('Bars')}
             className={currentPage === 'Bars' ? 'bar-link active' : 'bar-link'}
           >
-            <img></img>
+            <img className="images" src={barsIMG}></img>
           </a>
         </div>
         <div className='other'>
@@ -62,7 +65,7 @@ export default function Home({currentPage, handlePageChange}) {
             onClick={() => handlePageChange('Other')}
             className={currentPage === 'Other' ? 'other-link active' : 'other-link'}
           >
-            <img></img>
+            <img className="images" src={otherIMG}></img>
           </a>
         </div>
       </div>

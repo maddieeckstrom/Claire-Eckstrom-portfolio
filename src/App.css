@@ -9,19 +9,28 @@ body {
 }
 
 .CElogo {
-  max-width: 40%;
+  max-width: 25%;
   height: auto;
+  padding-left: 2%;
+  /* padding-bottom: 2%; */
 }
 
-.header {
-  margin-top: -4%;
+.fashionIMG {
+max-width: 75%;
+height: auto;
+padding: 28% 0 0 12%;
+}
+
+.images {
+  max-width: 100%;
+  height: auto;
+  padding-top: 30%;
 }
 
 .home-nav {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
-  margin-top: -8vh;
 }
 
 .fashion {
@@ -30,27 +39,27 @@ body {
   width: 45vw;
   border-radius: 50%;
   grid-column-start: 1;
-  margin-left: -2vw;
+  margin-left: -1.5vw;
 }
 
 .bars {
-  background-color: rgb(226, 206, 179);
-  height: 28vw;
-  width: 28vw;
+  background-color: rgb(198, 156, 110);
+  height: 26vw;
+  width: 26vw;
   border-radius: 50%;
   grid-column-start: 2;
-  margin-top: -22em;
+  margin-top: -27vw;
   margin-left: -2.5vw;
 }
 
 .other {
-  background-color: teal;
+  background-color: rgb(1, 81, 81);
   height: 33vw;
   width: 33vw;
   border-radius: 50%;
   grid-column-start: 3;
-  margin-top: -15em;
-  margin-left: -0.2vw;
+  margin-top: -15vw;
+  margin-left: -0.5vw;
 }
 
 .footer {
@@ -62,36 +71,18 @@ body {
 
 @media screen and (max-width: 1200px) {
   .bars {
-    margin-top: -20em;
     margin-left: -2.5vw;
   }
   .other {
-    margin-left: 0vw;
-  }
-}
-
-@media screen and (max-width: 1150px) {
-  .bars {
-    margin-top: -20em;
+    margin-left: -.5vw;
   }
 }
 
 @media screen and (max-width: 1000px) {
-  .fashion {
-    height: 47vw;
-    width: 47vw;
-  }
-  .bars {
-    height: 30vw;
-    width: 30vw;
-    margin-left: -2.5vw;
-    margin-top: -18em;
-  }
-  .other {
-    height: 35vw;
-    width: 35vw;
-    margin-top: -13em;
-  }
+.CElogo {
+  max-width: 30%;
+  height: auto;
+}
 }
 
 @media screen and (max-width: 768px) {
