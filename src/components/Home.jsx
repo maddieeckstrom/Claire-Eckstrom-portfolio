@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import '../App.css'
-import { motion } from "framer-motion";
+import '../App.css';
+// import { motion } from "framer-motion";
+import CElogo from '../assets/images/CEConsulting.png';
 
 export default function Home({currentPage, handlePageChange}) {
 
   const [showContent, setShowContent] = useState(false);
-  const [isVisible, setIsVisible] = useState(true)
-  // const [isHeaderVisible, setIsHeaderVisible] = useState(true);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
@@ -15,52 +14,26 @@ export default function Home({currentPage, handlePageChange}) {
 
     return () => clearTimeout(timeout);
   }, []);
-
-  const handleAnimationComplete = () => {
-    setIsVisible(false);
-  };
-
-  // useEffect(() => {
-    // Set interval to toggle header visibility every 1/2 second
-    // const intervalId = setInterval(() => {
-    //   setIsHeaderVisible(prevState => !prevState);
-    // }, 500);
-
-    // Clear after 2 seconds
-    // setTimeout(() => {
-    //   clearInterval(intervalId);
-    //   setIsHeaderVisible(true);
-    // }, 2000);
-
-    // Cleanup function to clear interval
-  //   return () => clearInterval(intervalId);
-  // }, []);
   
   return (
     <section className="section-container">
-      {/* {isHeaderVisible && ( */}
         <div className="header">
-          {isVisible && (
-            <div style={{ position: 'relative' }}>
-              <motion.div
-                style={{ position: 'absolute', top: 0, left: 0 }}
-                initial={{ x: 239, y: 0 }}
+          <img className="CElogo" src={CElogo}/>
+            {/* <div style={{ position: 'relative' }}> */}
+              {/* <motion.div
+                style={{ position: 'absolute', top: '25%', left: '25%' }}
+                initial={{ x: 0, y: 0, scale: 1}}
                 animate={{
-                  x: [239, 350, 500, 350], 
-                  y: [0, 0, 100, 200], 
-                  transition: { duration: 2, repeat: 0, type: 'keyframes' }
+                  x: ['25%', '5000%', '5000%', '1000%'],
+                  y: ['25%', '25%', '500%', '500%'],
+                  scale: [1],
+                  transition: { duration: 2, repeat: 0 }
                 }}
-                onAnimationComplete={handleAnimationComplete}
-                // path={{ path: "M239 0 Q 500 100, 350 200" }}
               >
-                <p>¨</p>
-              </motion.div>
-            </div>
-          )}
-          <p>CLAİRE ECKSTRÖM</p>
-          <p>CONSULTING</p>
+                <p>placeholder</p>
+              </motion.div> */}
+            {/* </div> */}
         </div>
-      {/* )} */}
       <div
         className="home-nav" 
         style={{ display: showContent ? 'grid' : 'none' }}
