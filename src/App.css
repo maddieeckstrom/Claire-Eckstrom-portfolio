@@ -12,7 +12,6 @@ body {
   max-width: 25%;
   height: auto;
   padding-left: 2%;
-  /* padding-bottom: 2%; */
 }
 
 .fashionIMG {
@@ -86,9 +85,6 @@ padding: 28% 0 0 12%;
 }
 
 @media screen and (max-width: 768px) {
-  .header {
-    margin-top: 0;
-  }
   .CElogo {
     max-width: 60%;
     height: auto;

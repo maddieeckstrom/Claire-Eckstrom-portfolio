@@ -1,16 +1,16 @@
-import '../App.css'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import CElogo from '../assets/images/CEConsulting.png';
+// import { motion } from "framer-motion";
 
-export default function Header({currentPage, handlePageChange}) {
+export default function Navbar() {
     return (
         <nav>
-            <a
-                href="#Home"
-                onClick={() => handlePageChange('Home')}
-                className={currentPage === 'Home' ? 'home-link active' : 'Home-link'}
-            >
-                <h1>CLAİRE ECKSTRÖM</h1>
-                <h1>CONSULTING</h1>
-            </a>
+            <div className="header">
+                <Link to="/">
+                    <img className="CElogo" src={CElogo} alt="Home"/>
+                </Link>
+            </div>
         </nav>
     )
 }

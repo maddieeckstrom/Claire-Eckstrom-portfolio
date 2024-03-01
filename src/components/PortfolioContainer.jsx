@@ -1,41 +1,26 @@
-import { useState } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import '../App.css';
-import Navbar from './Navbar'
+import Navbar from '../components/Navbar';
 import Home from '../components/Home';
 import Fashion from '../components/Fashion';
 import Bars from '../components/Bars';
 import Other from '../components/Other';
 import Footer from '../components/Footer';
 
-
 export default function PortfolioContainer() {
-    const [currentPage, setCurrentPage] = useState('Home');
-
-    const renderPage = () => {
-        // if (currentPage === 'Home') {
-        //     return <Home />;
-        // }
-
-        if (currentPage === 'Fashion') {
-            return <Fashion />;
-        }
-
-        if (currentPage === 'Bars') {
-            return <Bars />;
-        }
-        
-        if (currentPage === 'Other') {
-            return <Other />;
-        }
-    };
-
-    const handlePageChange = (page) => setCurrentPage(page);
-
     return (
-        <div>
-          <Home currentPage={currentPage} handlePageChange={handlePageChange}/>
-          <main>{renderPage()}</main>
-          <Footer />
-        </div>
-      );
+        <Router>
+            <div>
+                <Navbar>
+                </Navbar>
+                <Switch>
+                    <Route exact path="/" component={Home} />
+                    <Route exact path="/Fashion" component={Fashion} />
+                    <Route exact path="/Bars" component={Bars} />
+                    <Route exact path="/Other" component={Other} />
+                </Switch>
+                <Footer />
+            </div>
+        </Router>
+    );
 }
