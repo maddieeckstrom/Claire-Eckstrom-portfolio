@@ -14,13 +14,13 @@ body {
   padding-left: 2%;
 }
 
-.fashionIMG {
+.fashionIMGHome {
 max-width: 75%;
 height: auto;
 padding: 28% 0 0 12%;
 }
 
-.images {
+.imagesHome {
   max-width: 100%;
   height: auto;
   padding-top: 30%;
@@ -32,7 +32,7 @@ padding: 28% 0 0 12%;
   align-items: center;
 }
 
-.fashion {
+.fashionHome {
   background-color: #ff5722;
   height: 45vw;
   width: 45vw;
@@ -41,7 +41,7 @@ padding: 28% 0 0 12%;
   margin-left: -1.5vw;
 }
 
-.bars {
+.barsHome {
   background-color: rgb(198, 156, 110);
   height: 26vw;
   width: 26vw;
@@ -51,7 +51,7 @@ padding: 28% 0 0 12%;
   margin-left: -2.5vw;
 }
 
-.other {
+.otherHome {
   background-color: rgb(1, 81, 81);
   height: 33vw;
   width: 33vw;
@@ -61,18 +61,54 @@ padding: 28% 0 0 12%;
   margin-left: -0.5vw;
 }
 
+.fashionDiv {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+}
+
+.fashionIMG {
+  max-width: 30%;
+  height: auto;
+}
+
+.barsDiv {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+}
+
+.barsIMG {
+  max-width: 30%;
+  height: auto;
+}
+
+.otherDiv {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+}
+
+.otherIMG {
+  max-width: 30%;
+  height: auto;
+}
+
 .footer {
   display: flex;
   justify-content: space-evenly;
   align-items: end;
-  height: 40vh;
+  margin-top: 5vh;
 }
 
 @media screen and (max-width: 1200px) {
-  .bars {
+  .barsHome {
     margin-left: -2.5vw;
   }
-  .other {
+  .otherHome {
     margin-left: -.5vw;
   }
 }
@@ -96,21 +132,21 @@ padding: 28% 0 0 12%;
     max-width: 100vw;
     margin-top: -5vh;
   }
-  .fashion {
+  .fashionHome {
     grid-row-start: 1;
     margin-left: -7vw;
     margin-top: 10vw;
     height: 70vw;
     width: 70vw;
   }
-  .bars {
+  .barsHome {
     grid-row-start: 2;
     margin-left: -11vw;
     margin-top: -24vw;
     height: 50vw;
     width: 50vw;
   }
-  .other {
+  .otherHome {
     grid-row-start: 3;
     margin-left: -70vw;
     margin-top: -1vw;
@@ -118,6 +154,6 @@ padding: 28% 0 0 12%;
     width: 60vw;
   }
   .footer {
-    height: 15vh;
+    margin-top: 0;
   }
 }

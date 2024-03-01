@@ -11,8 +11,7 @@ export default function PortfolioContainer() {
     return (
         <Router>
             <div>
-                <Navbar>
-                </Navbar>
+                <Navbar/>
                 <Switch>
                     <Route exact path="/" component={Home} />
                     <Route exact path="/Fashion" component={Fashion} />

@@ -27,27 +27,27 @@ export default function Home() {
         className="home-nav" 
         style={{ display: showContent ? 'grid' : 'none' }}
       >
-        <div className='fashion'>
+        <div className='fashionHome'>
           <img
-            className="fashionIMG"
+            className="fashionIMGHome"
             src={fashionIMG}
-            alt="Fashion"
+            alt="Fashion, Luxury, & Lifestyle Brands"
             onClick={() => handleImageClick('Fashion')}
           />
         </div>
-        <div className='bars'>
+        <div className='barsHome'>
           <img
-            className="images"
+            className="imagesHome"
             src={barsIMG}
-            alt="Bars"
+            alt="Bars & Restaurants"
             onClick={() => handleImageClick('Bars')}
           />
         </div>
-        <div className='other'>
+        <div className='otherHome'>
           <img
-            className="images"
+            className="imagesHome"
             src={otherIMG}
-            alt="Other"
+            alt="Other Creatives"
             onClick={() => handleImageClick('Other')}
           />
         </div>
