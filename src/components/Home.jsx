@@ -37,7 +37,7 @@ export default function Home() {
         </div>
         <div className='barsHome'>
           <img
-            className="imagesHome"
+            className="barsIMGHome"
             src={barsIMG}
             alt="Bars & Restaurants"
             onClick={() => handleImageClick('Bars')}
@@ -45,7 +45,7 @@ export default function Home() {
         </div>
         <div className='otherHome'>
           <img
-            className="imagesHome"
+            className="otherIMGHome"
             src={otherIMG}
             alt="Other Creatives"
             onClick={() => handleImageClick('Other')}

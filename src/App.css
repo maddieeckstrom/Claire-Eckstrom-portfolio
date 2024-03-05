@@ -8,22 +8,65 @@ body {
     height: 100vh;
 }
 
+@media screen and (max-width: 768px) {
+  .header {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 .CElogo {
   max-width: 25%;
   height: auto;
   padding-left: 2%;
 }
 
+@keyframes moveDots {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  20% {
+    transform: translateX(50vw) translateY(0);
+  }
+  40% {
+    transform: translateX(100vw) translateY(0);
+  }
+  60% {
+    transform: translateX(100vw) translateY(40vh);
+  }
+  80% {
+    transform: translateX(80vw) translateY(45vh) scale(2);
+  }
+  100% {
+    transform: translateX(45vw) translateY(55vh) scale(4);
+  }
+
+}
+
+.dots {
+  max-width: 25%;
+  height: auto;
+  position: absolute;
+  margin-left: -24.5vw;
+  animation: moveDots 2s linear;
+}
+
 .fashionIMGHome {
 max-width: 75%;
 height: auto;
-padding: 28% 0 0 12%;
+padding: 29% 0 0 12%;
 }
 
-.imagesHome {
+.barsIMGHome {
   max-width: 100%;
   height: auto;
-  padding-top: 30%;
+  padding-top: 31%;
+}
+
+.otherIMGHome {
+  max-width: 100%;
+  height: auto;
+  padding-top: 34%;
 }
 
 .home-nav {
@@ -33,7 +76,7 @@ padding: 28% 0 0 12%;
 }
 
 .fashionHome {
-  background-color: #ff5722;
+  background-color: #FF4817;
   height: 45vw;
   width: 45vw;
   border-radius: 50%;
@@ -42,7 +85,7 @@ padding: 28% 0 0 12%;
 }
 
 .barsHome {
-  background-color: rgb(198, 156, 110);
+  background-color: #BA8F6B;
   height: 26vw;
   width: 26vw;
   border-radius: 50%;
@@ -52,7 +95,7 @@ padding: 28% 0 0 12%;
 }
 
 .otherHome {
-  background-color: rgb(1, 81, 81);
+  background-color: #01413F;
   height: 33vw;
   width: 33vw;
   border-radius: 50%;
@@ -118,12 +161,24 @@ padding: 28% 0 0 12%;
   max-width: 30%;
   height: auto;
 }
+.dots {
+  max-width: 30%;
+  margin-left: -29.5vw;
+    /* max-width: 30%;
+    margin-left: 2vw;
+    margin-top: -14.5vw; */
+}
 }
 
 @media screen and (max-width: 768px) {
   .CElogo {
     max-width: 60%;
     height: auto;
+    margin-left: 17%;
+  }
+  .dots {
+    max-width: 60%;
+    margin-left: -1.5vw;
   }
   .home-nav {
     grid-template-columns: 1fr;

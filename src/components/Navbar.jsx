@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import CElogo from '../assets/images/CEConsulting.png';
-// import { motion } from "framer-motion";
+import Dots from '../assets/images/dots.png'
 
 export default function Navbar() {
     return (
@@ -10,6 +10,7 @@ export default function Navbar() {
                 <Link to="/">
                     <img className="CElogo" src={CElogo} alt="Home"/>
                 </Link>
+                <img className="dots" src={Dots}></img>
             </div>
         </nav>
     )
